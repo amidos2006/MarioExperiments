@@ -1,0 +1,14 @@
+seed = 1023124
+inputFolder = input/
+outputFolder = output/
+levelFolder = levels/
+resultFolder = result/
+slicesType = Repeating
+appendingSize = 2
+chromosomeLength = 12
+populationSize = 20
+batchSize = 100
+inbreeding = 0.2
+crossover = 0.7
+mutation = 0.3
+eliteProb = 0.5

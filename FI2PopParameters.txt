@@ -1,0 +1,15 @@
+seed = 1023124
+inputFolder = input/
+outputFolder = output/
+levelFolder = levels/
+resultFolder = result/
+agentType = Run,Coin,Mushroom,HighJump,Shell,Stomp|LimitedJump,EnemyBlind,NoRun
+experimentType = PunishingModel,LimitedAgent
+slicesType = Repeating
+appendingSize = 2
+chromosomeLength = 12
+populationSize = 100
+crossover = 0.7
+mutation = 0.3
+elitism = 1
+fitnessType = entropy
