@@ -17,9 +17,8 @@ public class RepeatedLevelSlicesLibrary extends SlicesLibrary {
 	    for (int j = 0; j < lines.length; j++) {
 		slice += lines[j].charAt(i);
 	    }
-	    String[] expand = this.decodeLine(slice);
-	    for(String l:expand) {
-		this.slices.add(l);
+	    if(this.canBeAdded(slice)) {
+		this.slices.add(slice);
 	    }
 	}
 	this.arrayedSlices = this.slices.toArray(new String[0]);

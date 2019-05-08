@@ -85,7 +85,7 @@ public class CMEMapElites {
     private String getDimensionIndex(int[] dimensions) {
 	String result = "";
 	for(int i=0; i<dimensions.length; i++) {
-	    result += Math.ceil(dimensions[i]) + ",";
+	    result += dimensions[i] + ",";
 	}
 	return result.substring(0, result.length() - 1);
     }
