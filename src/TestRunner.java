@@ -33,9 +33,9 @@ public class TestRunner {
             e.printStackTrace();
         }
 	
-	Chromosome c = new Chromosome(rnd, sl, 14, 3);
-	c.stringInitialize("3468,3183,727,3134,2208,467,1407,1005,3504,334,603,667,2483,457");
+	Chromosome c = new Chromosome(rnd, sl, 12, 2);
+	c.stringInitialize("2517,440,161,989,974,1002,1012,2860,548,1951,88,2250");
 	MarioGame game = new MarioGame();
-	game.runGame(new agents.robinBaumgarten.Agent(), c.toString(), 20, 0, true);
+	game.runGame(new agents.robinBaumgarten.Agent(), c.toString(), 10, 0, true);
     }
 }

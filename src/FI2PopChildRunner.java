@@ -31,13 +31,13 @@ public class FI2PopChildRunner {
 		c.calculateResults(new MarioGame[] {
 			new MarioGame(new MarioEvent[] {new MarioEvent(EventType.COLLECT, MarioForwardModel.OBS_COIN)}),
 			new MarioGame()
-		}, new agents.robinBaumgarten.Agent(), 20);
+		}, new agents.robinBaumgarten.Agent(), 10);
 		break;
 	    case "mushroom":
 		c.calculateResults(new MarioGame[] {
 			new MarioGame(new MarioEvent[] {new MarioEvent(EventType.COLLECT, MarioForwardModel.OBS_MUSHROOM)}),
 			new MarioGame()
-		}, new agents.robinBaumgarten.Agent(), 20);
+		}, new agents.robinBaumgarten.Agent(), 10);
 		break;
 	    case "highjump":
 		//TODO
@@ -46,13 +46,13 @@ public class FI2PopChildRunner {
 		c.calculateResults(new MarioGame[] {
 			new MarioGame(new MarioEvent[] {new MarioEvent(EventType.SHELL_KILL)}),
 			new MarioGame()
-		}, new agents.robinBaumgarten.Agent(), 20);
+		}, new agents.robinBaumgarten.Agent(), 10);
 		break;
 	    case "stomp":
 		c.calculateResults(new MarioGame[] {
 			new MarioGame(new MarioEvent[] {new MarioEvent(EventType.STOMP_KILL)}),
 			new MarioGame()
-		}, new agents.robinBaumgarten.Agent(), 20);
+		}, new agents.robinBaumgarten.Agent(), 10);
 		break;
 	    }
 	    break;

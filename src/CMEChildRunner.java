@@ -97,7 +97,7 @@ public class CMEChildRunner {
 		int index = 0;
 		for(Chromosome c:chromosomes) {
 		    System.out.println("\tRunning Child number: " + ++index);
-		    c.calculateResults(new MarioGame(), new agents.robinBaumgarten.Agent(), 20);
+		    c.calculateResults(new MarioGame(), new agents.robinBaumgarten.Agent(), 10);
 		}
 		child.clearInputFiles();
 		System.out.println("Writing Chromosomes results.");
