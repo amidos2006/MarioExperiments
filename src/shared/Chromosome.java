@@ -130,10 +130,10 @@ public class Chromosome implements Comparable<Chromosome>{
     private void calculateDimensions(MarioResult run, int doNothingFallKills) {
 	this._dimensions = new int[12];
 	this._dimensions[0] = run.getNumJumps() >= 1? 1:0;
-	this._dimensions[1] = run.getMaxJumpAirTime() <= 30.0? 1:0;
-	this._dimensions[2] = run.getMaxJumpAirTime() >= 60.0? 1:0;
-	this._dimensions[3] = run.getMaxXJump() <= 48.0? 1:0;
-	this._dimensions[4] = run.getMaxXJump() >= 96.0? 1:0;
+	this._dimensions[1] = run.getMaxJumpAirTime() <= 10.0? 1:0;
+	this._dimensions[2] = run.getMaxJumpAirTime() >= 12.0? 1:0;
+	this._dimensions[3] = run.getMaxXJump() <= 40.0? 1:0;
+	this._dimensions[4] = run.getMaxXJump() >= 120.0? 1:0;
 	this._dimensions[5] = run.getKillsByStomp() >= 1? 1:0;
 	this._dimensions[6] = run.getKillsByShell() >= 1? 1:0;
 	this._dimensions[7] = doNothingFallKills >= 1? 1:0;
@@ -229,7 +229,7 @@ public class Chromosome implements Comparable<Chromosome>{
 	int height = this._library.getSlice(this._genes[0]).length();
 	for (int i = 0; i < height; i++) {
 	    String appendingChar = "-";
-	    if (i == height - 1) {
+	    if (i == height - 1 || i == height - 2) {
 		appendingChar = "X";
 	    }
 	    for (int k = 0; k < this._appendingSize; k++) {

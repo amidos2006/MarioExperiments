@@ -33,8 +33,8 @@ public class TestHuman {
             e.printStackTrace();
         }
         
-	Chromosome c = new Chromosome(rnd, sl, 14, 3);
-	c.stringInitialize("1261,2057,910,2192,3546,1807,2044,1457,1949,3482,1779,1403,2227,160");
+	Chromosome c = new Chromosome(rnd, sl, 12, 2);
+	c.stringInitialize("2517,440,161,989,974,1002,1012,2860,548,1951,88,2250");
 	MarioGame game = new MarioGame();
 	game.playGame(c.toString(), 20);
     }
