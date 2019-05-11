@@ -38,8 +38,8 @@ public class Chromosome implements Comparable<Chromosome>{
     public void stringInitialize(String level) {
 	String[] parts = level.split(",");
 	this._age = Integer.parseInt(parts[0]);
-	for (int i = 1; i < this._genes.length; i++) {
-	    this._genes[i] = Integer.parseInt(parts[i]);
+	for (int i = 0; i < this._genes.length; i++) {
+	    this._genes[i] = Integer.parseInt(parts[i + 1]);
 	}
     }
     
@@ -130,9 +130,9 @@ public class Chromosome implements Comparable<Chromosome>{
     private void calculateDimensions(MarioResult run, int doNothingFallKills) {
 	this._dimensions = new int[12];
 	this._dimensions[0] = run.getNumJumps() >= 1? 1:0;
-	this._dimensions[1] = run.getMaxJumpAirTime() <= 10.0? 1:0;
+	this._dimensions[1] = (run.getMaxJumpAirTime() > 0 && run.getMaxJumpAirTime() <= 10.0)? 1:0;
 	this._dimensions[2] = run.getMaxJumpAirTime() >= 12.0? 1:0;
-	this._dimensions[3] = run.getMaxXJump() <= 40.0? 1:0;
+	this._dimensions[3] = (run.getMaxXJump() > 0 && run.getMaxXJump() <= 40.0)? 1:0;
 	this._dimensions[4] = run.getMaxXJump() >= 120.0? 1:0;
 	this._dimensions[5] = run.getKillsByStomp() >= 1? 1:0;
 	this._dimensions[6] = run.getKillsByShell() >= 1? 1:0;
